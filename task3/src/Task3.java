@@ -27,7 +27,7 @@ public class Task3 {
         }
         change(tests.get("tests"), col);
         try {
-            obj.writeValue(new File(reportText), tests);
+            obj.writerWithDefaultPrettyPrinter().writeValue(new File(reportText), tests);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
